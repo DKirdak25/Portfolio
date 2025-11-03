@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Home | Dipali Kirdak{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+<div class="container">
+    <div class="content-section">
+      <div class="greeting">Hello !!!</div>
+      <h1 class="main-title">I'm Dipali<br>Kirdak</h1>
+      <div class="badge">PROFESSIONAL Full Stack Developer</div>
+      <p class="description">
+        I am a dedicated full stack developer who loves turning ideas into interactive and efficient web solutions. With experience across both front-end and back-end development, I focus on building scalable, secure, and visually engaging applications that deliver real results.
+        My work blends functionality with design, using the latest web technologies and creative tools to craft digital experiences that are both powerful and user-friendly. Every project I take on is driven by a passion for learning, innovation, and problem-solving.
+        Let’s build something exceptional together.
+      </p>
+    </div>
+    
+    <div class="image-section">
+      <div class="profile-image">
+        <div class="profile-placeholder">👤</div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

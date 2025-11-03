@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Contact | Dipali Kirdak{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/contact.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="header-section">
+    <h1>GET IN TOUCH</h1>
+    <p>Let’s Work Together</p>
+  </div>
+
+  <div class="contact-grid">
+    <div class="contact-item">
+      <div class="contact-icon">
+        <i class="fas fa-phone-alt"></i>
+      </div>
+      <h3>Phone & Mobile</h3>
+      <p>+91 97677 61336</p>  <!-- Replace with your real phone if you want -->
+    </div>
+    
+    <div class="contact-item">
+      <div class="contact-icon">
+        <i class="fas fa-envelope"></i>
+      </div>
+      <h3>Email</h3>
+      <p>
+        <a href="mailto:dipalikirdak9@gmail.com">dipalikirdak9@gmail.com</a>
+      </p>
+    </div>
+
+    <div class="contact-item">
+      <div class="contact-icon">
+        <i class="fas fa-map-marker-alt"></i>
+      </div>
+      <h3>Address</h3>
+      <p>Gopal Nagar, Amravati, Maharashtra<br>444603</p>
+    </div>
+
+    <div class="contact-item">
+      <div class="contact-icon">
+        <i class="fas fa-heart"></i>
+      </div>
+      <h3>Social Media</h3>
+      <p>
+        <a href="#" target="_blank">LinkedIn</a><br>
+        <a href="#" target="_blank">GitHub</a><br>
+        <a href="#" target="_blank">Instagram</a>
+      </p>
+    </div>
+  </div>
+</div>
+{% endblock %}

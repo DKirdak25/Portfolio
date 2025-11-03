@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About | Dipali Kirdak{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+  <div class="container">
+    <div class="image-section">
+      <div class="profile-container">
+        <div class="profile-image">
+          <div class="profile-placeholder">
+            <svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />
+                  <stop offset="100%" style="stop-color:#16213e;stop-opacity:1" />
+                </linearGradient>
+                <radialGradient id="glowGrad">
+                  <stop offset="0%" style="stop-color:#1e90ff;stop-opacity:0.3" />
+                  <stop offset="100%" style="stop-color:#1e90ff;stop-opacity:0" />
+                </radialGradient>
+              </defs>
+              <rect width="400" height="500" fill="url(#bgGrad)"/>
+              <ellipse cx="200" cy="250" rx="150" ry="150" fill="url(#glowGrad)"/>
+              <circle cx="200" cy="160" r="50" fill="#2a2a3e"/>
+              <ellipse cx="200" cy="300" rx="80" ry="120" fill="#2a2a3e"/>
+              <rect x="120" y="250" width="160" height="180" rx="80" fill="#2a2a3e"/>
+            </svg>
+          </div>
+        </div>
+        
+        <div class="dot-grid">
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="content-section">
+      <h1 class="main-title">MY BIOGRAPHY</h1>
+      <div class="neon-line"></div>
+      
+      <p class="description">
+        I’m Dipali Kirdak, a passionate Full Stack Developer who loves building interactive, efficient, and user-friendly web applications. My expertise spans across both front-end and back-end development, where I use technologies like Python, Django, HTML, CSS, and JavaScript to bring creative ideas to life.
+
+I enjoy exploring AI tools to enhance productivity and innovation, and I use Canva to design clean, visually appealing interfaces and digital assets. My approach combines logical problem-solving with aesthetic design to create seamless digital experiences.
+
+
+      </p>
+      
+      <p class="description">
+        Beyond coding, I enjoy learning new technologies, reading, and staying curious about how design and technology can work together to make a difference.
+    
+      </p>
+      
+      <div class="skills-section">
+        <h3>Skill & Interest</h3>
+        <div class="skills-tags">
+          <div class="skill-tag">Python & Django</div>
+          <div class="skill-tag">HTML, CSS & JavaScript</div>
+          <div class="skill-tag">AI Tools & Automation</div>
+          <div class="skill-tag">UI Design with Canva</div>
+          <div class="skill-tag">Reading & Creative Learning</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+{% endblock %}
+
+

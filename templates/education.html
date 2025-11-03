@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Education | Dipali Kirdak{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/education.css' %}">
+  <div class="container">
+    <div class="header-section">
+      <div class="title-wrapper">
+        <h1>EDUCATION</h1>
+        <div class="neon-line"></div>
+      </div>
+      <div class="year-range">2022 – 2025</div>
+    </div>
+    
+    <div class="content-wrapper">
+      <!-- Left side - Description -->
+      <div class="education-description">
+        <p>
+          My educational journey has been centered on building a strong foundation in technology and creativity. I’ve developed a deep passion for full stack development, AI tools, and design — continuously learning and applying new skills through hands-on projects and real-world exploration.
+        </p>
+        </div>
+      
+      <div class="year-range-mobile">2022 – 2025</div>
+      
+      <!-- Right side - Education list -->
+      <div class="education-list">
+        <div class="education-item">
+          <h3>Secondary Education</h3>
+          <p>Jagadamba Vidyalaya | 2022</p>
+        </div>
+        
+        <div class="education-item">
+          <h3></h3>
+          <p>Higher Secondary Education | 2022 – 2024</p>
+        </div>
+        
+        <div class="education-item">
+          <h3>Self-Learning & Exploration</h3>
+          <p>Independent Learning Journey | Full Stack Development, AI Tools & Creative Design | 2024 – 2025</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+{% endblock %}

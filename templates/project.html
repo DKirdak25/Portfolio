@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Projects | Dipali Kirdak{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/project.css' %}">
+<div class="container">
+  <div class="header-section">
+    <div class="title-wrapper">
+      <h1>PROJECTS</h1>
+      <div class="neon-line"></div>
+      <div class="dot-grid">
+        {% for i in "................................" %}
+          <div class="dot"></div>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="year-range">2024 - 2025</div>
+  </div>
+
+  <div class="projects-grid">
+    <div class="project-card">
+      <div class="project-image cyan">
+        <div class="project-placeholder">🚀</div>
+      </div>
+      <div class="project-info">
+        <h3>Learning & Exploring | 2024 - Present</h3>
+        <p>I’m currently focused on learning full stack development using Python, Django, HTML, CSS, JavaScript, and AI tools. I’m building foundational projects to strengthen my skills and prepare for real-world development.</p>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-image magenta">
+        <div class="project-placeholder">💡</div>
+      </div>
+      <div class="project-info">
+        <h3>Upcoming Projects | In Progress</h3>
+        <p>Exciting projects are on the way! I’m currently experimenting with ideas in web development, AI integration, and creative design. Stay tuned for future updates as I continue to grow and build.</p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
