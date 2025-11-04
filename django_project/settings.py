@@ -91,7 +91,7 @@ USE_TZ = True
 # ✅ Static files configuration for Render
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [BASE_DIR / 'static']  # where your CSS/JS/images are
-STATIC_ROOT = BASE_DIR / 'static'    # folder where collectstatic puts files
+STATIC_ROOT = BASE_DIR / 'staticfiles'    # folder where collectstatic puts files
 
 # ✅ Optional: improve static file compression and caching
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
