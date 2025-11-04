@@ -2,7 +2,9 @@ asgiref==3.10.0
 black==25.9.0
 click==8.3.0
 Cython==3.1.6
+dj-database-url==3.0.1
 Django==5.0.14
+gunicorn==23.0.0
 mypy_extensions==1.1.0
 packaging==25.0
 pathspec==0.12.1
@@ -12,4 +14,4 @@ setuptools==80.9.0
 sqlparse==0.5.3
 tzdata==2025.2
 wheel==0.45.1
-psycopg2-binary
+whitenoise==6.11.0
