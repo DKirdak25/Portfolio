@@ -11,8 +11,7 @@ import dj_database_url
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-1x(v1yg5h!0to&8)yscguf_0kcmhuspq^qdh@pv42omh9im0m!"
+SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -71,8 +70,10 @@ DATABASES = {
 }
 
 # ✅ Add this to automatically switch to Render's database (PostgreSQL)
-DATABASES["default"] = dj_database_url.config(conn_max_age=600, ssl_require=True, default=DATABASES["default"])
-
+db_from_env = dj_database_url.config(conn_max_age=600, ssl_require=True)
+if db_from_env:
+    DATABASES['default'].update(db_from_env)
+    
 # Password validation
 AUTH_PASSWORD_VALIDATORS = [
     {"NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator"},
