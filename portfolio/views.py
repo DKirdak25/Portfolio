@@ -8,6 +8,9 @@ class AboutView(TemplateView):
 				
 class EducationView(TemplateView):
 				template_name = "education.html"		
+
+class ExperienceView(TemplateView):
+				template_name = "experience.html"
 				
 class ProjectView(TemplateView):
 				template_name = "project.html"

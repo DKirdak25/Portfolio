@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Experience | Dipali Kirdak{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/experience.css' %}">
+  <div class="container">
+    <div class="header-section">
+      <div class="title-wrapper">
+        <h1>Experience</h1>
+        <div class="neon-line"></div>
+      </div>
+      <div class="year-range">2024 – 2025</div>
+    </div>
+    
+    <div class="content-wrapper">
+      <!-- Left side - Description -->
+      <div class="experience-description">
+        <p>
+          Independent Learning Journey
+Currently on a drop year to explore and strengthen my skills in Full Stack Development, AI Tools, and Creative Design.
+Focusing on practical learning through projects, experiments, and self-paced exploration.
+        </p>
+        </div>
+      
+      <div class="year-range-mobile">2024 - 2025</div>
+      
+      <!-- Right side - Education list -->
+      <div class="experience-list">
+        <div class="experience-item">
+          <h3>Personal Projects & Skill Building</h3>
+          <p>Working on small projects to apply what I learn in web development, AI-based tools, and UI/UX design.
+Building a foundation for future professional opportunities. | 2024 – Present</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+{% endblock %}
