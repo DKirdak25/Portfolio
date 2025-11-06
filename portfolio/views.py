@@ -7,10 +7,7 @@ class AboutView(TemplateView):
 				template_name = "about.html"
 				
 class EducationView(TemplateView):
-				template_name = "education.html"
-				
-class ExperienceView(TemplateView):
-				template_name = "experience.html"				
+				template_name = "education.html"		
 				
 class ProjectView(TemplateView):
 				template_name = "project.html"
