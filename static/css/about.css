@@ -7,8 +7,6 @@
       min-height: 100vh;
       display: grid;
       grid-template-columns: 1.2fr 1fr;
-      align-items: start;
-      justify-content: space-between;
       gap: 4rem;
     }
     
