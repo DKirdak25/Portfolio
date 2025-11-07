@@ -16,7 +16,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']  # later replace * with your Render domain
+ALLOWED_HOSTS = ['portfolio-iscf.onrender.com', 'localhost'] # later replace * with your Render domain
 
 # Application definition
 INSTALLED_APPS = [
