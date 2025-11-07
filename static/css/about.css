@@ -7,6 +7,8 @@
       min-height: 100vh;
       display: grid;
       grid-template-columns: 1.2fr 1fr;
+      align-items: start;
+      justify-content: space-between;
       gap: 4rem;
     }
     
@@ -91,6 +93,29 @@
       animation: fadeInRight 1s ease forwards;
       animation-delay: 0.4s;
     }
+
+/* Add the missing keyframes */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 
     .main-title {
       font-size: clamp(2.5rem, 5vw, 4rem);
