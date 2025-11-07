@@ -6,29 +6,12 @@
 {% block content %}
 <link rel="stylesheet" href="{% static 'css/about.css' %}">
   <div class="container">
-    <div class="image-section">
-      <div class="profile-container">
-        <div class="profile-image">
-          <div class="profile-placeholder">
-            <svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />
-                  <stop offset="100%" style="stop-color:#16213e;stop-opacity:1" />
-                </linearGradient>
-                <radialGradient id="glowGrad">
-                  <stop offset="0%" style="stop-color:#1e90ff;stop-opacity:0.3" />
-                  <stop offset="100%" style="stop-color:#1e90ff;stop-opacity:0" />
-                </radialGradient>
-              </defs>
-              <rect width="400" height="500" fill="url(#bgGrad)"/>
-              <ellipse cx="200" cy="250" rx="150" ry="150" fill="url(#glowGrad)"/>
-              <circle cx="200" cy="160" r="50" fill="#2a2a3e"/>
-              <ellipse cx="200" cy="300" rx="80" ry="120" fill="#2a2a3e"/>
-              <rect x="120" y="250" width="160" height="180" rx="80" fill="#2a2a3e"/>
-            </svg>
-          </div>
-        </div>
+   <div class="image-section">
+  <div class="profile-container">
+    <div class="profile-image">
+      <img src="{% static 'assets/profile2.jpg' %}" alt="Dipali Kirdak" class="profile-img">
+    </div>
+</div>
         
         <div class="dot-grid">
           <div class="dot"></div>

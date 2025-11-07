@@ -6,14 +6,17 @@
       padding: 0 3rem;
       min-height: 100vh;
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1.2fr 1fr;
+      align-items: start;
+      justify-content: space-between;
       gap: 4rem;
     }
     
     /* Left image section */
     .image-section {
-      position: relative;
-      opacity: 0;
+      display: flex;
+  justify-content: center;
+  align-items: center;
       animation: fadeInLeft 1s ease forwards;
       animation-delay: 0.2s;
     }
@@ -27,7 +30,7 @@
       width: 100%;
       max-width: 400px;
       aspect-ratio: 3/4;
-      background: linear-gradient(135deg, rgba(30, 144, 255, 0.2), rgba(147, 51, 234, 0.1));
+      background: none; /* 🧹 removes the colored background */
       border-radius: 8px;
       overflow: hidden;
       position: relative;
@@ -41,25 +44,18 @@
       box-shadow: 0 15px 40px rgba(30, 144, 255, 0.4);
     }
     
-    .profile-placeholder {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-      transition: all 0.5s ease;
-    }
-    
     .profile-image:hover .profile-placeholder {
       filter: brightness(1.2);
     }
     
-    .profile-placeholder svg {
-      width: 100%;
-      height: 100%;
-      transition: all 0.5s ease;
-    }
+    /* Image style */
+.profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
     
     /* Dot grid decoration */
     .dot-grid {
