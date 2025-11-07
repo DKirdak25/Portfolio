@@ -2,11 +2,11 @@
 .container {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 80px 3rem 3rem; /* Added top padding to account for fixed header */
+  padding: 100px 3rem 3rem;
   min-height: 100vh;
   display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  align-items: center; /* Changed from 'start' to 'center' for better alignment */
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
   gap: 4rem;
 }
 
@@ -15,20 +15,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 0; /* Added initial opacity for animation */
+  opacity: 0;
   animation: fadeInLeft 1s ease forwards;
   animation-delay: 0.2s;
 }
 
 .profile-container {
   position: relative;
-  width: 100%; /* Added for proper sizing */
-  max-width: 400px; /* Constrain maximum width */
+  width: 100%;
+  max-width: 400px;
 }
 
 .profile-image {
   width: 100%;
-  max-width: 400px;
   aspect-ratio: 3/4;
   background: none;
   border-radius: 8px;
@@ -44,10 +43,6 @@
   box-shadow: 0 15px 40px rgba(30, 144, 255, 0.4);
 }
 
-.profile-image:hover .profile-placeholder {
-  filter: brightness(1.2);
-}
-
 /* Image style */
 .profile-img {
   width: 100%;
@@ -57,11 +52,16 @@
   transition: transform 0.5s ease, filter 0.5s ease;
 }
 
+.profile-image:hover .profile-img {
+  filter: brightness(1.1);
+  transform: scale(1.05);
+}
+
 /* Dot grid decoration */
 .dot-grid {
   position: absolute;
   top: 10%;
-  right: -10%;
+  right: -15%;
   display: grid;
   grid-template-columns: repeat(5, 8px);
   grid-template-rows: repeat(8, 8px);
@@ -98,10 +98,9 @@
   opacity: 0;
   animation: fadeInRight 1s ease forwards;
   animation-delay: 0.4s;
-  width: 100%; /* Ensures content takes full width of grid column */
 }
 
-/* Add the missing keyframes */
+/* Animation keyframes */
 @keyframes fadeInLeft {
   from {
     opacity: 0;
@@ -125,7 +124,7 @@
 }
 
 .main-title {
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: 800;
   color: #fff;
   line-height: 1.1;
@@ -154,17 +153,17 @@
 }
 
 .description {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: var(--gray);
   line-height: 1.8;
   font-weight: 300;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   transition: all 0.3s ease;
 }
 
 .description:hover {
   color: #fff;
-  transform: translateY(-5px);
+  transform: translateX(5px);
 }
 
 .skills-section {
@@ -247,7 +246,7 @@
   }
   
   .dot-grid {
-    right: -5%;
+    right: -8%;
   }
 }
 
@@ -262,24 +261,15 @@
     margin: 0 auto;
   }
   
-  .profile-image {
-    margin: 0 auto;
-  }
-  
   .dot-grid {
     display: none;
   }
   
   .content-section {
-    text-align: center;
+    text-align: left;
   }
   
-  .neon-line {
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  .skills-tags {
-    justify-content: center;
+  .main-title {
+    font-size: 2rem;
   }
 }
