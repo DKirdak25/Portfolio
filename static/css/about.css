@@ -1,54 +1,54 @@
+/* Main container */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 80px 3rem 3rem; /* Added top padding to account for fixed header */
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  align-items: center; /* Changed from 'start' to 'center' for better alignment */
+  gap: 4rem;
+}
 
-    /* Main container */
-    .container {
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 0 3rem;
-      min-height: 100vh;
-      display: grid;
-      grid-template-columns: 1.2fr 1fr;
-      align-items: start;
-      justify-content: space-between;
-      gap: 4rem;
-    }
-    
-    /* Left image section */
-    .image-section {
-      display: flex;
+/* Left image section */
+.image-section {
+  display: flex;
   justify-content: center;
   align-items: center;
-      animation: fadeInLeft 1s ease forwards;
-      animation-delay: 0.2s;
-    }
+  opacity: 0; /* Added initial opacity for animation */
+  animation: fadeInLeft 1s ease forwards;
+  animation-delay: 0.2s;
+}
 
-    
-    .profile-container {
-      position: relative;
-    }
-    
-    .profile-image {
-      width: 100%;
-      max-width: 400px;
-      aspect-ratio: 3/4;
-      background: none; /* 🧹 removes the colored background */
-      border-radius: 8px;
-      overflow: hidden;
-      position: relative;
-      transition: all 0.5s ease;
-      cursor: pointer;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    }
-    
-    .profile-image:hover {
-      transform: scale(1.03);
-      box-shadow: 0 15px 40px rgba(30, 144, 255, 0.4);
-    }
-    
-    .profile-image:hover .profile-placeholder {
-      filter: brightness(1.2);
-    }
-    
-    /* Image style */
+.profile-container {
+  position: relative;
+  width: 100%; /* Added for proper sizing */
+  max-width: 400px; /* Constrain maximum width */
+}
+
+.profile-image {
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 3/4;
+  background: none;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.profile-image:hover {
+  transform: scale(1.03);
+  box-shadow: 0 15px 40px rgba(30, 144, 255, 0.4);
+}
+
+.profile-image:hover .profile-placeholder {
+  filter: brightness(1.2);
+}
+
+/* Image style */
 .profile-img {
   width: 100%;
   height: 100%;
@@ -56,43 +56,50 @@
   display: block;
   transition: transform 0.5s ease, filter 0.5s ease;
 }
-    
-    /* Dot grid decoration */
-    .dot-grid {
-      position: absolute;
-      top: 10%;
-      right: -10%;
-      display: grid;
-      grid-template-columns: repeat(5, 8px);
-      grid-template-rows: repeat(8, 8px);
-      gap: 12px;
-      z-index: 2;
-    }
-    
-    .dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: rgba(30, 144, 255, 0.4);
-      animation: dotPulse 3s infinite ease-in-out;
-    }
-    
-    .dot:nth-child(odd) {
-      background: rgba(147, 51, 234, 0.4);
-      animation-delay: 0.5s;
-    }
-    
-    @keyframes dotPulse {
-      0%, 100% { opacity: 0.3; transform: scale(1); }
-      50% { opacity: 1; transform: scale(1.2); }
-    }
-    
-    /* Right content section */
-    .content-section {
-      opacity: 0;
-      animation: fadeInRight 1s ease forwards;
-      animation-delay: 0.4s;
-    }
+
+/* Dot grid decoration */
+.dot-grid {
+  position: absolute;
+  top: 10%;
+  right: -10%;
+  display: grid;
+  grid-template-columns: repeat(5, 8px);
+  grid-template-rows: repeat(8, 8px);
+  gap: 12px;
+  z-index: 2;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(30, 144, 255, 0.4);
+  animation: dotPulse 3s infinite ease-in-out;
+}
+
+.dot:nth-child(odd) {
+  background: rgba(147, 51, 234, 0.4);
+  animation-delay: 0.5s;
+}
+
+@keyframes dotPulse {
+  0%, 100% { 
+    opacity: 0.3; 
+    transform: scale(1); 
+  }
+  50% { 
+    opacity: 1; 
+    transform: scale(1.2); 
+  }
+}
+
+/* Right content section */
+.content-section {
+  opacity: 0;
+  animation: fadeInRight 1s ease forwards;
+  animation-delay: 0.4s;
+  width: 100%; /* Ensures content takes full width of grid column */
+}
 
 /* Add the missing keyframes */
 @keyframes fadeInLeft {
@@ -117,144 +124,162 @@
   }
 }
 
-    .main-title {
-      font-size: clamp(2.5rem, 5vw, 4rem);
-      font-weight: 800;
-      color: #fff;
-      line-height: 1.1;
-      margin-bottom: 1.5rem;
-      letter-spacing: -1px;
-      text-transform: uppercase;
-    }
-    
-    .neon-line {
-      height: 4px;
-      width: 120px;
-      background: linear-gradient(90deg, var(--primary), transparent);
-      border-radius: 2px;
-      box-shadow: 0 0 15px rgba(30, 144, 255, 0.6);
-      margin-bottom: 2rem;
-      animation: neonGlow 2s infinite alternate;
-    }
-    
-    @keyframes neonGlow {
-      from {
-        box-shadow: 0 0 15px rgba(30, 144, 255, 0.6);
-      }
-      to {
-        box-shadow: 0 0 25px rgba(30, 144, 255, 0.9), 0 0 35px rgba(30, 144, 255, 0.4);
-      }
-    }
-    
-    .description {
-      font-size: 0.9rem;
-      color: var(--gray);
-      line-height: 1.8;
-      font-weight: 300;
-      margin-bottom: 2rem;
-      transition: all 0.3s ease;
-    }
-    
-    .description:hover {
-      color: #fff;
-      transform: translateY(-5px);
-    }
-    
-    .skills-section {
-      margin-top: 3rem;
-    }
-    
-    .skills-section h3 {
-      font-size: 1.3rem;
-      font-weight: 600;
-      color: #fff;
-      margin-bottom: 1.5rem;
-      position: relative;
-      display: inline-block;
-    }
-    
-    .skills-section h3::after {
-      content: '';
-      position: absolute;
-      width: 0;
-      height: 2px;
-      bottom: -5px;
-      left: 0;
-      background: var(--primary);
-      transition: all 0.5s ease;
-    }
-    
-    .skills-section h3:hover::after {
-      width: 100%;
-    }
-    
-    .skills-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-    
-    .skill-tag {
-      padding: 0.6rem 1.5rem;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      border-radius: 25px;
-      font-size: 0.85rem;
-      color: var(--light);
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      font-weight: 300;
-      transition: all 0.3s ease;
-      cursor: pointer;
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .skill-tag::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-      transition: all 0.5s ease;
-    }
-    
-    .skill-tag:hover::before {
-      left: 100%;
-    }
-    
-    .skill-tag:hover {
-      background: rgba(30, 144, 255, 0.1);
-      border-color: var(--primary);
-      color: var(--primary);
-      transform: translateY(-2px);
-      box-shadow: 0 5px 15px rgba(30, 144, 255, 0.3);
-    }
-      /* Responsive */
-    @media (max-width: 1024px) {
-      .container {
-        padding: 120px 2rem 2rem;
-        gap: 3rem;
-      }
-      
-      .dot-grid {
-        right: -5%;
-      }
-    }
-    
-    @media (max-width: 768px) {
-            .container {
-        grid-template-columns: 1fr;
-        padding: 120px 1.5rem 1.5rem;
-        gap: 3rem;
-      }
-      
-      .profile-image {
-        margin: 0 auto;
-      }
-      
-      .dot-grid {
-        display: none;
-      }
-    }
+.main-title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+}
+
+.neon-line {
+  height: 4px;
+  width: 120px;
+  background: linear-gradient(90deg, var(--primary), transparent);
+  border-radius: 2px;
+  box-shadow: 0 0 15px rgba(30, 144, 255, 0.6);
+  margin-bottom: 2rem;
+  animation: neonGlow 2s infinite alternate;
+}
+
+@keyframes neonGlow {
+  from {
+    box-shadow: 0 0 15px rgba(30, 144, 255, 0.6);
+  }
+  to {
+    box-shadow: 0 0 25px rgba(30, 144, 255, 0.9), 0 0 35px rgba(30, 144, 255, 0.4);
+  }
+}
+
+.description {
+  font-size: 0.9rem;
+  color: var(--gray);
+  line-height: 1.8;
+  font-weight: 300;
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+}
+
+.description:hover {
+  color: #fff;
+  transform: translateY(-5px);
+}
+
+.skills-section {
+  margin-top: 3rem;
+}
+
+.skills-section h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.skills-section h3::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background: var(--primary);
+  transition: all 0.5s ease;
+}
+
+.skills-section h3:hover::after {
+  width: 100%;
+}
+
+.skills-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.skill-tag {
+  padding: 0.6rem 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 25px;
+  font-size: 0.85rem;
+  color: var(--light);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 300;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-tag::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: all 0.5s ease;
+}
+
+.skill-tag:hover::before {
+  left: 100%;
+}
+
+.skill-tag:hover {
+  background: rgba(30, 144, 255, 0.1);
+  border-color: var(--primary);
+  color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(30, 144, 255, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .container {
+    padding: 100px 2rem 2rem;
+    gap: 3rem;
+  }
+  
+  .dot-grid {
+    right: -5%;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+    padding: 100px 1.5rem 2rem;
+    gap: 3rem;
+  }
+  
+  .profile-container {
+    margin: 0 auto;
+  }
+  
+  .profile-image {
+    margin: 0 auto;
+  }
+  
+  .dot-grid {
+    display: none;
+  }
+  
+  .content-section {
+    text-align: center;
+  }
+  
+  .neon-line {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .skills-tags {
+    justify-content: center;
+  }
+}
